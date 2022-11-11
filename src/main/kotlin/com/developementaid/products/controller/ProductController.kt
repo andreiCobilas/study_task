@@ -16,7 +16,7 @@ class ProductController(val service: ProductService) {
     }
 
     @GetMapping("/product/{id}")
-    fun index(@PathVariable id: Int): List<Product> =
+    fun index(@PathVariable id: Int): Product =
         service.getProductById(id)
 
     @DeleteMapping("/product/{id}")
